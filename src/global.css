@@ -2,79 +2,41 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+@font-face {
+  font-family: "Heading";
+  src: url("/CopernicusTrial-SemiboldItalic.ttf") format("truetype");
 }
 
-.slide-in-bottom {
-  animation: slideInFromBottom 0.3s ease-out;
+@font-face {
+  font-family: "Body";
+  src: url("/CopernicusTrial-Book.ttf") format("truetype");
 }
 
-.input-glow {
-  box-shadow: 0 0 3px #4a5568, 0 0 5px #4a5568;
+h1 {
+  font-family: "Heading";
+  font-size: 40px;
+  color: #386136;
 }
 
-.input-glow:hover {
-  box-shadow: 0 0 5px #87f4f6, 0 0 10px #8b9ebe;
+h2 {
+  text-align: center;
+  font-size: 25px;
+  margin: 20px;
 }
 
-.message-glow {
-  box-shadow: 0 0 3px #4a5568, 0 0 5px #4a5568;
+div {
+  font-family: "Body";
 }
 
-.message-glow:hover {
-  box-shadow: 0 0 3px #5eabac, 0 0 4px #8b9ebe;
+.scrollable-div::-webkit-scrollbar {
+  width: 6px;
 }
 
-@keyframes glimmer {
-  0% {
-    background-position: -200px;
-  }
-  100% {
-    background-position: calc(200px + 100%);
-  }
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #f4f1f4;
+  border-radius: 10px;
 }
 
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.shimmer {
-  animation: glimmer 2s infinite linear;
-  background: rgb(82, 82, 91);
-  background: linear-gradient(
-    to right,
-    darkgray 10%,
-    rgb(130, 129, 129) 50%,
-    rgba(124, 123, 123, 0.816) 90%
-  );
-  background-size: 200px 100%;
-  background-repeat: no-repeat;
-  /* color: transparent; */
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    color: white;
-  }
-  50% {
-    color: #f59e0b; /* Tailwind's yellow-500 */
-  }
-}
-
-.animate-pulse-once {
-  animation: pulse 5s cubic-bezier(0, 0, 0.2, 1) 1;
+.scrollable-div::-webkit-scrollbar-track {
+  background: transparent;
 }

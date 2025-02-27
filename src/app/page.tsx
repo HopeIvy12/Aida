@@ -47,21 +47,14 @@ const Page: React.FC = () => {
   }, [messages, gotMessages]);
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-[#f4f1f4] p-2 mx-auto max-w-full">
-      <div className="flex w-[1000px] h-[600px]">
-        <Chat/>
-        <button
-          type="button"
-          className="absolute left-20 transform -translate-x-12 bg-gray-800 text-white rounded-l py-2 px-4 lg:hidden"
-          onClick={(e) => {
-            e.currentTarget.parentElement
-              ?.querySelector(".transform")
-              ?.classList.toggle("translate-x-full");
-          }}
-        >
-          ☰
-        </button>
+    <div className="flex flex-row justify-center items-center h-screen bg-[#f4f1f4] p-2 mx-auto max-w-full">
+      <div className="flex flex-col justify-start items-start flex-1 h-full w-[20vw]">
+        <h1 className="self-start p-4 ">Aida</h1>
       </div>
+      <div className="flex w-[60vw]  h-[600px]">
+        <Chat />
+      </div>
+      <div className="flex flex-1 h-full w-[20vw]"></div>
     </div>
   );
 };
