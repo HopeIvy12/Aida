@@ -1,10 +1,6 @@
-// UrlButton.tsx
-
 import { Button } from "./Button";
 import React, { FC } from "react";
-import { IconContext } from "react-icons";
 import { AiOutlineLink } from "react-icons/ai";
-import Link from "next/link";
 
 export interface IUrlEntry {
   url: string;
@@ -12,6 +8,11 @@ export interface IUrlEntry {
   seeded: boolean;
   loading: boolean;
 }
+//doesnt seem to know IURL
+//we have the data in a URL in urls
+//We need a extra button taht allows us to select the url before sending like before
+//we need to look at ollies verison and mine and compare
+//adding that button to the home page
 
 interface IURLButtonProps {
   entry: IUrlEntry;
