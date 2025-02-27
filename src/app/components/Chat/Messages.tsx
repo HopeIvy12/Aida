@@ -23,8 +23,8 @@ export default function Messages({ messages }: { messages: Message[] }) {
           key={index}
           className={`${
             msg.role === "assistant"
-              ? "bg-[#e0d7e0] ml-12"
-              : "bg-transparent mr-12"
+              ? "bg-[#e2d7e2] ml-12"
+              : "bg-[#ede6ed] mr-12"
           } my-2 p-3 rounded-xl hover:shadow-lg transition-shadow duration-200 flex slide-in-bottom bg-[#f2edf2] `}
         >
           <div className="ml-2 flex items-center text-black">{msg.content}</div>
