@@ -7,7 +7,7 @@ export default function Messages({ messages }: { messages: Message[] }) {
   return (
     <div className="p-6 rounded-xl overflow-y-scroll flex-grow flex flex-col justify-end bg-[#f4f1f4] scrollable-div">
       {messages.length === 0 && (
-        <div>
+        <div className="mb-14">
           <h2>
             Hi I'm <span className="aida-text">Aida</span>
           </h2>

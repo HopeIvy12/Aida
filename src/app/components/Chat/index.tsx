@@ -8,7 +8,7 @@ const Chat: React.FC = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
-    <div id="chat" className="flex flex-col w-full bg-[#f4f1f4]">
+    <div id="chat" className="flex flex-col w-full bg-[#f4f1f4] mb-20">
       <Messages messages={messages} />
       <form
         onSubmit={handleSubmit}
