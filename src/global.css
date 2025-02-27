@@ -24,6 +24,11 @@ h2 {
   margin: 20px;
 }
 
+.aida-text {
+  font-family: heading;
+  color: #386136;
+}
+
 div {
   font-family: "Body";
 }

@@ -9,7 +9,7 @@ export default function Messages({ messages }: { messages: Message[] }) {
       {messages.length === 0 && (
         <div>
           <h2>
-            Hi I'm <span className="your-class-name">Aida</span>
+            Hi I'm <span className="aida-text">Aida</span>
           </h2>
           <p className="text-center text-gray-800">
             I'm here to help you find information about foodbanks. <br />
