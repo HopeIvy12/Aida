@@ -16,7 +16,7 @@ const Chat: React.FC = () => {
       >
         <input
           type="text"
-          className="appearance-none rounded-full w-full py-4 px-3 text-black leading-tight bg-white border-none transition-shadow duration-200"
+          className="appearance-none rounded-full w-full py-4 px-3 text-black leading-tight bg-white border-none transition-shadow duration-200 "
           value={input}
           onChange={handleInputChange}
         />
