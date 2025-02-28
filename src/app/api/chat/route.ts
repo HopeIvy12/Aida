@@ -1,32 +1,30 @@
-
-import { Message } from 'ai'
-import { getContext } from '@/utils/context'
-import { openai } from '@ai-sdk/openai';
-import { streamText } from 'ai';
+import { Message } from "ai";
+import { getContext } from "@/utils/context";
+import { openai } from "@ai-sdk/openai";
+import { streamText } from "ai";
 
 // IMPORTANT! Set the runtime to edge
-export const runtime = 'edge'
+export const runtime = "edge";
 
 export async function POST(req: Request) {
   try {
-
-    const { messages } = await req.json()
+    const { messages } = await req.json();
 
     // Get the last message
-    const lastMessage = messages[messages.length - 1]
+    const lastMessage = messages[messages.length - 1];
 
     // Get the context from the last message
-    const context = await getContext(lastMessage.content, '')
+    const context = await getContext(lastMessage.content, "");
 
     const prompt = [
       {
-        role: 'system',
+        role: "system",
         content: `AI assistant is a brand new, powerful, human-like artificial intelligence.
       The traits of AI include expert knowledge, helpfulness, cleverness, and articulateness.
       AI is a well-behaved and well-mannered individual.
       AI is always friendly, kind, and inspiring, and he is eager to provide vivid and thoughtful responses to the user.
       AI has the sum of all knowledge in their brain, and is able to accurately answer nearly any question about any topic in conversation.
-      AI assistant is a big fan of Pinecone and Vercel.
+      AI assistant is a big fan of Pinecone and Vercel. When someone asks for information about foodbanks, the only information AI should return is the name, email, phone number and the address of the foodbank. AI will respond to messages about foodbanks with a cheerful helpful tone of voice, introducing the information first.
       START CONTEXT BLOCK
       ${context}
       END OF CONTEXT BLOCK
@@ -36,15 +34,18 @@ export async function POST(req: Request) {
       AI assistant will not invent anything that is not drawn directly from the context.
       `,
       },
-    ]
+    ];
 
     const result = await streamText({
       model: openai("gpt-4o"),
-      messages: [...prompt,...messages.filter((message: Message) => message.role === 'user')]
+      messages: [
+        ...prompt,
+        ...messages.filter((message: Message) => message.role === "user"),
+      ],
     });
 
     return result.toDataStreamResponse();
   } catch (e) {
-    throw (e)
+    throw e;
   }
 }

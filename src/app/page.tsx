@@ -48,16 +48,13 @@ const Page: React.FC = () => {
 
   return (
     <div className="flex flex-row justify-center items-center h-screen bg-[#f4f1f4] p-2 mx-auto max-w-full">
-      <div className="flex flex-col justify-start items-start flex-1 h-full w-[20vw]">
+      <div className="flex flex-col justify-start items-start flex-1 h-screen w-[20vw]">
         <h1 className="self-start p-4 ">Aida</h1>
       </div>
-      <div className="flex w-[60vw]  h-[800px]">
+      <div className="flex w-[60vw]  h-[600px]">
         <Chat />
       </div>
-      <div className="flex flex-1 h-full w-[20vw]">
-        {" "}
-        {/* <Context className="" selected={context} /> */}
-      </div>
+      <div className="flex flex-1 h-full w-[20vw]"></div>
     </div>
   );
 };
