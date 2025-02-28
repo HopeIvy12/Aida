@@ -7,6 +7,12 @@
   src: url("/CopernicusTrial-SemiboldItalic.ttf") format("truetype");
 }
 
+body {
+  margin-bottom: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 @font-face {
   font-family: "Body";
   src: url("/CopernicusTrial-Book.ttf") format("truetype");
@@ -27,6 +33,11 @@ h2 {
 .aida-text {
   font-family: heading;
   color: #386136;
+}
+
+#text {
+  white-space: pre-wrap; /* Ensures line breaks and spaces are preserved */
+  word-wrap: break-word; /* Allows words to break if they are too long */
 }
 
 div {
