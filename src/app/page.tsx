@@ -51,7 +51,7 @@ const Page: React.FC = () => {
       <div className="flex flex-col justify-start items-start flex-1 h-full w-[20vw]">
         <h1 className="self-start p-4 ">Aida</h1>
       </div>
-      <div className="flex w-[60vw]  h-[600px]">
+      <div className="flex w-[60vw]  h-[800px]">
         <Chat />
       </div>
       <div className="flex flex-1 h-full w-[20vw]"></div>

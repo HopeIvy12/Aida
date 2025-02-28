@@ -45,3 +45,8 @@ div {
 .scrollable-div::-webkit-scrollbar-track {
   background: transparent;
 }
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}

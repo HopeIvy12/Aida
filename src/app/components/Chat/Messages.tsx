@@ -25,7 +25,7 @@ export default function Messages({ messages }: { messages: Message[] }) {
             msg.role === "assistant"
               ? "bg-[#ddd2dd] ml-12"
               : "bg-[#eae1ea] mr-12"
-          } my-2 p-3 rounded-xl hover:shadow-lg transition-shadow duration-200 flex slide-in-bottom bg-[#f2edf2] `}
+          } my-2 p-3 rounded-xl hover:shadow-lg transition-shadow duration-200 flex slide-in-bottom `}
         >
           <div className="ml-2 flex items-center text-black">{msg.content}</div>
         </div>
